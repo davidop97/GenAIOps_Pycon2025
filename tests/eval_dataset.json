@@ -1,26 +1,26 @@
 [
   {
-    "question": "¿Cómo ingiero datos en tiempo real en AWS?",
-    "answer": "Para ingesta en tiempo real AWS recomienda servicios como Amazon Kinesis Data Streams (captura de datos de streaming), Kinesis Data Firehose (entrega automática en S3, Redshift o Elasticsearch) y Amazon MSK (Kafka gestionado). También puedes usar AWS IoT Core para telemetría de dispositivos y AWS DataSync para transferencias continuas."
+    "question": "Cuales son los servicios recomendados para la ingesta de datos en tiempo real en AWS segun los documentos internos?",
+    "answer": "Para la ingesta de datos en tiempo real, AWS recomienda Amazon Kinesis Data Streams para capturar datos de streaming, Kinesis Data Firehose para entrega automatica a S3 o Redshift, y Amazon MSK como una opcion de Kafka gestionado. Tambien se puede usar AWS IoT Core para datos de dispositivos."
   },
   {
-    "question": "¿Qué servicio serverless de AWS debo usar para procesos ETL?",
-    "answer": "AWS Glue es el servicio ETL serverless recomendado: utiliza Glue Crawlers para descubrir esquemas, el Glue Data Catalog para metadatos y trabajos en Python/Scala para transformar y cargar datos directamente en S3, Redshift o bases de datos compatibles."
+    "question": "Que servicio serverless de AWS es recomendado para procesos ETL segun los documentos internos?",
+    "answer": "AWS Glue es el servicio serverless recomendado para procesos ETL, con Glue Crawlers para descubrir esquemas, Glue Data Catalog para gestionar metadatos y trabajos en Python o Scala para transformar y cargar datos en S3 o Redshift."
   },
   {
-    "question": "¿Cómo construyo un Data Lake seguro en AWS?",
-    "answer": "Un Data Lake seguro se construye sobre Amazon S3 con AWS Lake Formation para gestionar permisos a nivel de tabla y fila, cifrado en reposo (SSE-S3 o SSE-KMS) y en tránsito (TLS), IAM para control de acceso, y AWS CloudTrail/CloudWatch para auditoría y monitoreo."
+    "question": "Cuales son las mejores practicas para construir un Data Lake seguro en AWS segun los documentos internos?",
+    "answer": "Las mejores practicas para construir un Data Lake seguro en AWS incluyen usar Amazon S3 con cifrado SSE-KMS, implementar AWS Lake Formation para gestionar permisos, configurar IAM para control de acceso y habilitar auditoria con AWS CloudTrail."
   },
   {
-    "question": "¿Qué opciones de consulta interactiva de datos ofrece AWS?",
-    "answer": "AWS ofrece Amazon Athena para consultas SQL serverless directamente sobre datos en S3, Redshift Spectrum para federar consultas entre Amazon Redshift y S3, y Amazon QuickSight para dashboards interactivos basados en esos resultados."
+    "question": "Que servicios de AWS son recomendados para consultas interactivas de datos segun los documentos internos?",
+    "answer": "AWS recomienda Amazon Athena para consultas SQL serverless en S3, Amazon Redshift Spectrum para consultas federadas entre Redshift y S3, y AWS Glue Data Catalog para gestionar metadatos que soportan consultas interactivas."
   },
   {
-    "question": "¿Cómo orquesto un pipeline de Machine Learning en AWS?",
-    "answer": "Para ML en producción AWS sugiere usar Amazon SageMaker Pipelines junto con AWS Step Functions: define etapas de preparación (Processing), entrenamiento (Training), evaluación (Model Evaluation) y despliegue (Model Registry → Endpoint), todo orquestado de forma automatizada y reproducible."
+    "question": "Cuales son los pasos para construir un pipeline de Machine Learning listo para produccion en AWS segun los documentos internos?",
+    "answer": "Para construir un pipeline de Machine Learning listo para produccion en AWS, los pasos incluyen usar Amazon SageMaker para entrenamiento y despliegue de modelos, AWS Step Functions para orquestar el flujo de trabajo, AWS Lambda para procesamiento basado en eventos y Amazon CloudWatch para monitoreo."
   },
   {
-    "question": "¿Qué buenas prácticas recomienda AWS para optimizar costos en un Data Lake?",
-    "answer": "Entre las prácticas clave están usar políticas de ciclo de vida en S3 (mover datos antiguos a S3 Glacier), comprimir y particionar datos, habilitar el versionado con limpieza automática, elegir el formato columnar (Parquet/ORC) y aprovisionar instancias spot o escalado automático en servicios como EMR y Glue."
+    "question": "Cuales son las practicas recomendadas para optimizar costos en un Data Lake en AWS segun los documentos internos?",
+    "answer": "Las practicas recomendadas para optimizar costos en un Data Lake en AWS incluyen usar politicas de ciclo de vida de S3 para mover datos a S3 Glacier, comprimir datos en formatos como Parquet, particionar datos y monitorear costos con AWS Cost Explorer."
   }
 ]

@@ -15,7 +15,7 @@ load_dotenv(override=True)
 # -------------------------
 #  Configuración
 # -------------------------
-PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v2_resumido_directo")
+PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v2_senior_machine_learning_engineer")
 CHUNK_SIZE     = int(os.getenv("CHUNK_SIZE", 512))
 CHUNK_OVERLAP  = int(os.getenv("CHUNK_OVERLAP", 50))
 DATASET_PATH   = "tests/eval_dataset.json"
@@ -86,7 +86,7 @@ for i, pair in enumerate(dataset, start=1):
                 verbose=False
             )
 
-            # Evalua solo ESTE criterio con evaluate_strings
+            # Evalua solo    criterio con evaluate_strings
             graded = single_crit_chain.evaluate_strings(
                 input=pregunta,
                 prediction=gen,
