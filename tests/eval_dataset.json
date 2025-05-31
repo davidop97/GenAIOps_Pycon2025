@@ -1,22 +1,26 @@
 [
-    {
-        "question": "\u00bfQu\u00e9 cubre el plan de beneficios Northwind Health Plus?",
-        "answer": "El plan Northwind Health Plus cubre atenci\u00f3n m\u00e9dica, dental, de la vista, medicamentos recetados y servicios de salud mental."
-    },
-    {
-        "question": "\u00bfCu\u00e1l es el procedimiento para tomar una licencia por maternidad?",
-        "answer": "Debes notificar a Recursos Humanos al menos 30 d\u00edas antes de la fecha esperada y presentar la documentaci\u00f3n m\u00e9dica correspondiente."
-    },
-    {
-        "question": "\u00bfQu\u00e9 incluye el programa PerksPlus?",
-        "answer": "PerksPlus incluye descuentos en gimnasios, membres\u00edas de bienestar, vales de alimentos y soporte financiero."
-    },
-    {
-        "question": "\u00bfQu\u00e9 responsabilidades tiene un analista de datos seg\u00fan el role library?",
-        "answer": "Seg\u00fan el Role Library, un analista de datos debe recolectar, limpiar y analizar datos para generar reportes estrat\u00e9gicos para el negocio."
-    },
-    {
-        "question": "\u00bfCu\u00e1les son los beneficios est\u00e1ndar de Northwind?",
-        "answer": "Los beneficios est\u00e1ndar incluyen seguro m\u00e9dico b\u00e1sico, vacaciones pagadas, y plan de retiro 401(k)."
-    }
+  {
+    "question": "¿Cómo ingiero datos en tiempo real en AWS?",
+    "answer": "Para ingesta en tiempo real AWS recomienda servicios como Amazon Kinesis Data Streams (captura de datos de streaming), Kinesis Data Firehose (entrega automática en S3, Redshift o Elasticsearch) y Amazon MSK (Kafka gestionado). También puedes usar AWS IoT Core para telemetría de dispositivos y AWS DataSync para transferencias continuas."
+  },
+  {
+    "question": "¿Qué servicio serverless de AWS debo usar para procesos ETL?",
+    "answer": "AWS Glue es el servicio ETL serverless recomendado: utiliza Glue Crawlers para descubrir esquemas, el Glue Data Catalog para metadatos y trabajos en Python/Scala para transformar y cargar datos directamente en S3, Redshift o bases de datos compatibles."
+  },
+  {
+    "question": "¿Cómo construyo un Data Lake seguro en AWS?",
+    "answer": "Un Data Lake seguro se construye sobre Amazon S3 con AWS Lake Formation para gestionar permisos a nivel de tabla y fila, cifrado en reposo (SSE-S3 o SSE-KMS) y en tránsito (TLS), IAM para control de acceso, y AWS CloudTrail/CloudWatch para auditoría y monitoreo."
+  },
+  {
+    "question": "¿Qué opciones de consulta interactiva de datos ofrece AWS?",
+    "answer": "AWS ofrece Amazon Athena para consultas SQL serverless directamente sobre datos en S3, Redshift Spectrum para federar consultas entre Amazon Redshift y S3, y Amazon QuickSight para dashboards interactivos basados en esos resultados."
+  },
+  {
+    "question": "¿Cómo orquesto un pipeline de Machine Learning en AWS?",
+    "answer": "Para ML en producción AWS sugiere usar Amazon SageMaker Pipelines junto con AWS Step Functions: define etapas de preparación (Processing), entrenamiento (Training), evaluación (Model Evaluation) y despliegue (Model Registry → Endpoint), todo orquestado de forma automatizada y reproducible."
+  },
+  {
+    "question": "¿Qué buenas prácticas recomienda AWS para optimizar costos en un Data Lake?",
+    "answer": "Entre las prácticas clave están usar políticas de ciclo de vida en S3 (mover datos antiguos a S3 Glacier), comprimir y particionar datos, habilitar el versionado con limpieza automática, elegir el formato columnar (Parquet/ORC) y aprovisionar instancias spot o escalado automático en servicios como EMR y Glue."
+  }
 ]

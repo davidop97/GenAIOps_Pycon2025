@@ -9,10 +9,11 @@ from app.rag_pipeline import load_vectorstore_from_disk, build_chain
 from langchain_openai import ChatOpenAI
 from langchain.evaluation.qa import QAEvalChain
 
-load_dotenv()
+load_dotenv(override=True)
 
 # Configuración
-PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v1_asistente_rrhh")
+# PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v1_asistente_rrhh")
+PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v2_resumido_directo")
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", 512))
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", 50))
 DATASET_PATH = "tests/eval_dataset.json"

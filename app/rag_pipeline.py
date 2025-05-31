@@ -17,7 +17,7 @@ from langchain.chains import ConversationalRetrievalChain
 from dotenv import load_dotenv
 import mlflow
 
-load_dotenv()
+load_dotenv(override=True)
 
 DATA_DIR = "data/pdfs"
 PROMPT_DIR = "app/prompts"
@@ -73,7 +73,7 @@ def load_prompt(version="v1_asistente_rrhh"):
 
 def build_chain(vectordb, prompt_version="v1_asistente_rrhh"):
     prompt = load_prompt(prompt_version)
-    retriever = vectordb.as_retriever()
+    retriever = vectordb.as_retriever(search_kwargs={"k": 8})
     return ConversationalRetrievalChain.from_llm(
         llm = ChatOpenAI(model="gpt-4o", temperature=0),
         retriever=retriever,
